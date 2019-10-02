@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.blani.secondbreakfast.OptionsActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewapple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/apple"
+        android:contentDescription="@string/apple"/>
+
+    <EditText
+        android:id="@+id/editTextNoApple"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/iniApple"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewapple" />
+
+    <EditText
+        android:id="@+id/editTextNoSandwich"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/iniSandwich"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/editTextNoApple"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSandwich" />
+
+    <EditText
+        android:id="@+id/editTextMinute"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/iniSandwich"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/editTextHour"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNoOthers"
+        android:layout_marginLeft="32dp" />
+
+    <EditText
+        android:id="@+id/editTextHour"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/iniSandwich"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/textViewDeadline"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNoSandwich"
+        android:layout_marginLeft="92dp" />
+
+    <EditText
+        android:id="@+id/editTextNoOthers"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/iniOther"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/editTextNoSandwich"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewOther" />
+
+    <ImageView
+        android:id="@+id/imageViewSandwich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewapple"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/sandwich"
+        android:contentDescription="@string/sandwich" />
+
+    <ImageView
+        android:id="@+id/imageViewOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSandwich"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/salad"
+        android:contentDescription="@string/other" />
+
+    <TextView
+        android:id="@+id/textViewDeadline"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/deadline"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNoApple"
+        android:layout_gravity="start" />
+
+    <TextView
+        android:id="@+id/textViewAlarms"
+        android:layout_width="142dp"
+        android:layout_height="34dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/alarms"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDeadline" />
+
+    <EditText
+        android:id="@+id/editTextNoAlarms"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textViewAlarms"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHour"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="48dp"
+        android:onClick="saveNewDay"/>
+
+    <TextView
+        android:id="@+id/textViewWarning"
+        android:layout_width="335dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/warning"
+        android:textColor="?android:attr/colorError"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAlarms" />
+
+</android.support.constraint.ConstraintLayout>
